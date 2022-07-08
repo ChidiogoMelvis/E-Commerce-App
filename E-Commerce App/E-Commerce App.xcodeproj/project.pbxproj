@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4699C3C28770C8800F2BF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4699C3B28770C8800F2BF99 /* AppDelegate.swift */; };
+		B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */; };
+		B4699C4528770C8B00F2BF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4699C4428770C8B00F2BF99 /* Assets.xcassets */; };
+		B4699C4828770C8B00F2BF99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4699C4628770C8B00F2BF99 /* LaunchScreen.storyboard */; };
+		B4699C6A28771B8A00F2BF99 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5328771B8900F2BF99 /* Montserrat-VariableFont_wght.ttf */; };
+		B4699C6B28771B8A00F2BF99 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5428771B8900F2BF99 /* Montserrat-Italic-VariableFont_wght.ttf */; };
+		B4699C6C28771B8A00F2BF99 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5628771B8900F2BF99 /* Montserrat-LightItalic.ttf */; };
+		B4699C6D28771B8A00F2BF99 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5728771B8900F2BF99 /* Montserrat-Medium.ttf */; };
+		B4699C6E28771B8A00F2BF99 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5828771B8900F2BF99 /* Montserrat-BoldItalic.ttf */; };
+		B4699C6F28771B8A00F2BF99 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5928771B8900F2BF99 /* Montserrat-Light.ttf */; };
+		B4699C7028771B8A00F2BF99 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5A28771B8900F2BF99 /* Montserrat-ThinItalic.ttf */; };
+		B4699C7128771B8A00F2BF99 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5B28771B8900F2BF99 /* Montserrat-ExtraLight.ttf */; };
+		B4699C7228771B8A00F2BF99 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5C28771B8900F2BF99 /* Montserrat-Thin.ttf */; };
+		B4699C7328771B8A00F2BF99 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5D28771B8900F2BF99 /* Montserrat-Bold.ttf */; };
+		B4699C7428771B8A00F2BF99 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5E28771B8900F2BF99 /* Montserrat-MediumItalic.ttf */; };
+		B4699C7528771B8A00F2BF99 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C5F28771B8900F2BF99 /* Montserrat-BlackItalic.ttf */; };
+		B4699C7628771B8A00F2BF99 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6028771B8900F2BF99 /* Montserrat-SemiBold.ttf */; };
+		B4699C7728771B8A00F2BF99 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6128771B8900F2BF99 /* Montserrat-ExtraLightItalic.ttf */; };
+		B4699C7828771B8A00F2BF99 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6228771B8900F2BF99 /* Montserrat-ExtraBold.ttf */; };
+		B4699C7928771B8A00F2BF99 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6328771B8900F2BF99 /* Montserrat-Black.ttf */; };
+		B4699C7A28771B8A00F2BF99 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6428771B8900F2BF99 /* Montserrat-Regular.ttf */; };
+		B4699C7B28771B8A00F2BF99 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6528771B8900F2BF99 /* Montserrat-Italic.ttf */; };
+		B4699C7C28771B8A00F2BF99 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6628771B8900F2BF99 /* Montserrat-SemiBoldItalic.ttf */; };
+		B4699C7D28771B8A00F2BF99 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6728771B8900F2BF99 /* Montserrat-ExtraBoldItalic.ttf */; };
+		B4699C7E28771B8A00F2BF99 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6828771B8A00F2BF99 /* OFL.txt */; };
+		B4699C7F28771B8A00F2BF99 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4699C6928771B8A00F2BF99 /* README.txt */; };
+		B4F989BE2878777000D3D1CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989BD2878777000D3D1CA /* ViewController.swift */; };
+		B4F989C02878833A00D3D1CA /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989BF2878833A00D3D1CA /* OnboardingPageViewController.swift */; };
+		B4F989C2287884F200D3D1CA /* OnboardingViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C1287884F200D3D1CA /* OnboardingViewControllerOne.swift */; };
+		B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */; };
+		B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */; };
+		B4F989C82878C41400D3D1CA /* UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C72878C41400D3D1CA /* UIFonts.swift */; };
+		B4F989D12878EA0200D3D1CA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D02878EA0200D3D1CA /* Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B4699C3828770C8800F2BF99 /* E-Commerce App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Commerce App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4699C3B28770C8800F2BF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B4699C4428770C8B00F2BF99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4699C4728770C8B00F2BF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4699C4928770C8B00F2BF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4699C5328771B8900F2BF99 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B4699C5428771B8900F2BF99 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B4699C5628771B8900F2BF99 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		B4699C5728771B8900F2BF99 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		B4699C5828771B8900F2BF99 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B4699C5928771B8900F2BF99 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		B4699C5A28771B8900F2BF99 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		B4699C5B28771B8900F2BF99 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B4699C5C28771B8900F2BF99 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		B4699C5D28771B8900F2BF99 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		B4699C5E28771B8900F2BF99 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		B4699C5F28771B8900F2BF99 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		B4699C6028771B8900F2BF99 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		B4699C6128771B8900F2BF99 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		B4699C6228771B8900F2BF99 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B4699C6328771B8900F2BF99 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		B4699C6428771B8900F2BF99 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		B4699C6528771B8900F2BF99 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		B4699C6628771B8900F2BF99 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B4699C6728771B8900F2BF99 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B4699C6828771B8A00F2BF99 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		B4699C6928771B8A00F2BF99 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		B4F989BD2878777000D3D1CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4F989BF2878833A00D3D1CA /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		B4F989C1287884F200D3D1CA /* OnboardingViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerOne.swift; sourceTree = "<group>"; };
+		B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerTwo.swift; sourceTree = "<group>"; };
+		B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerThree.swift; sourceTree = "<group>"; };
+		B4F989C72878C41400D3D1CA /* UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFonts.swift; sourceTree = "<group>"; };
+		B4F989D02878EA0200D3D1CA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4699C3528770C8800F2BF99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4699C2F28770C8800F2BF99 = {
+			isa = PBXGroup;
+			children = (
+				B4699C3A28770C8800F2BF99 /* E-Commerce App */,
+				B4699C3928770C8800F2BF99 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4699C3928770C8800F2BF99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C3828770C8800F2BF99 /* E-Commerce App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4699C3A28770C8800F2BF99 /* E-Commerce App */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989CF2878E6E200D3D1CA /* Delegates */,
+				B4F989D22878ED3B00D3D1CA /* Extensions */,
+				B4F989CC2878E68A00D3D1CA /* CustomFonts */,
+				B4699C5128771A4900F2BF99 /* Fonts */,
+				B4F989CB2878E66700D3D1CA /* Controllers */,
+				B4F989CD2878E6AB00D3D1CA /* Resources */,
+				B4F989CE2878E6C700D3D1CA /* Storyboard */,
+				B4699C4928770C8B00F2BF99 /* Info.plist */,
+			);
+			path = "E-Commerce App";
+			sourceTree = "<group>";
+		};
+		B4699C5128771A4900F2BF99 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C5228771B8900F2BF99 /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B4699C5228771B8900F2BF99 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C5328771B8900F2BF99 /* Montserrat-VariableFont_wght.ttf */,
+				B4699C5428771B8900F2BF99 /* Montserrat-Italic-VariableFont_wght.ttf */,
+				B4699C5528771B8900F2BF99 /* static */,
+				B4699C6828771B8A00F2BF99 /* OFL.txt */,
+				B4699C6928771B8A00F2BF99 /* README.txt */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		B4699C5528771B8900F2BF99 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C5628771B8900F2BF99 /* Montserrat-LightItalic.ttf */,
+				B4699C5728771B8900F2BF99 /* Montserrat-Medium.ttf */,
+				B4699C5828771B8900F2BF99 /* Montserrat-BoldItalic.ttf */,
+				B4699C5928771B8900F2BF99 /* Montserrat-Light.ttf */,
+				B4699C5A28771B8900F2BF99 /* Montserrat-ThinItalic.ttf */,
+				B4699C5B28771B8900F2BF99 /* Montserrat-ExtraLight.ttf */,
+				B4699C5C28771B8900F2BF99 /* Montserrat-Thin.ttf */,
+				B4699C5D28771B8900F2BF99 /* Montserrat-Bold.ttf */,
+				B4699C5E28771B8900F2BF99 /* Montserrat-MediumItalic.ttf */,
+				B4699C5F28771B8900F2BF99 /* Montserrat-BlackItalic.ttf */,
+				B4699C6028771B8900F2BF99 /* Montserrat-SemiBold.ttf */,
+				B4699C6128771B8900F2BF99 /* Montserrat-ExtraLightItalic.ttf */,
+				B4699C6228771B8900F2BF99 /* Montserrat-ExtraBold.ttf */,
+				B4699C6328771B8900F2BF99 /* Montserrat-Black.ttf */,
+				B4699C6428771B8900F2BF99 /* Montserrat-Regular.ttf */,
+				B4699C6528771B8900F2BF99 /* Montserrat-Italic.ttf */,
+				B4699C6628771B8900F2BF99 /* Montserrat-SemiBoldItalic.ttf */,
+				B4699C6728771B8900F2BF99 /* Montserrat-ExtraBoldItalic.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		B4F989CB2878E66700D3D1CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989BD2878777000D3D1CA /* ViewController.swift */,
+				B4F989BF2878833A00D3D1CA /* OnboardingPageViewController.swift */,
+				B4F989C1287884F200D3D1CA /* OnboardingViewControllerOne.swift */,
+				B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */,
+				B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4F989CC2878E68A00D3D1CA /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989C72878C41400D3D1CA /* UIFonts.swift */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		B4F989CD2878E6AB00D3D1CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C4428770C8B00F2BF99 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4F989CE2878E6C700D3D1CA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C4628770C8B00F2BF99 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B4F989CF2878E6E200D3D1CA /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B4699C3B28770C8800F2BF99 /* AppDelegate.swift */,
+				B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		B4F989D22878ED3B00D3D1CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989D02878EA0200D3D1CA /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4699C3728770C8800F2BF99 /* E-Commerce App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4699C4C28770C8B00F2BF99 /* Build configuration list for PBXNativeTarget "E-Commerce App" */;
+			buildPhases = (
+				B4699C3428770C8800F2BF99 /* Sources */,
+				B4699C3528770C8800F2BF99 /* Frameworks */,
+				B4699C3628770C8800F2BF99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "E-Commerce App";
+			productName = "E-Commerce App";
+			productReference = B4699C3828770C8800F2BF99 /* E-Commerce App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4699C3028770C8800F2BF99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B4699C3728770C8800F2BF99 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B4699C3328770C8800F2BF99 /* Build configuration list for PBXProject "E-Commerce App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4699C2F28770C8800F2BF99;
+			productRefGroup = B4699C3928770C8800F2BF99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4699C3728770C8800F2BF99 /* E-Commerce App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4699C3628770C8800F2BF99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4699C7C28771B8A00F2BF99 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				B4699C7828771B8A00F2BF99 /* Montserrat-ExtraBold.ttf in Resources */,
+				B4699C6B28771B8A00F2BF99 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
+				B4699C7528771B8A00F2BF99 /* Montserrat-BlackItalic.ttf in Resources */,
+				B4699C7428771B8A00F2BF99 /* Montserrat-MediumItalic.ttf in Resources */,
+				B4699C6E28771B8A00F2BF99 /* Montserrat-BoldItalic.ttf in Resources */,
+				B4699C4828770C8B00F2BF99 /* LaunchScreen.storyboard in Resources */,
+				B4699C6A28771B8A00F2BF99 /* Montserrat-VariableFont_wght.ttf in Resources */,
+				B4699C7A28771B8A00F2BF99 /* Montserrat-Regular.ttf in Resources */,
+				B4699C6F28771B8A00F2BF99 /* Montserrat-Light.ttf in Resources */,
+				B4699C7028771B8A00F2BF99 /* Montserrat-ThinItalic.ttf in Resources */,
+				B4699C6C28771B8A00F2BF99 /* Montserrat-LightItalic.ttf in Resources */,
+				B4699C7E28771B8A00F2BF99 /* OFL.txt in Resources */,
+				B4699C7728771B8A00F2BF99 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				B4699C7628771B8A00F2BF99 /* Montserrat-SemiBold.ttf in Resources */,
+				B4699C7228771B8A00F2BF99 /* Montserrat-Thin.ttf in Resources */,
+				B4699C7328771B8A00F2BF99 /* Montserrat-Bold.ttf in Resources */,
+				B4699C7B28771B8A00F2BF99 /* Montserrat-Italic.ttf in Resources */,
+				B4699C6D28771B8A00F2BF99 /* Montserrat-Medium.ttf in Resources */,
+				B4699C4528770C8B00F2BF99 /* Assets.xcassets in Resources */,
+				B4699C7128771B8A00F2BF99 /* Montserrat-ExtraLight.ttf in Resources */,
+				B4699C7928771B8A00F2BF99 /* Montserrat-Black.ttf in Resources */,
+				B4699C7F28771B8A00F2BF99 /* README.txt in Resources */,
+				B4699C7D28771B8A00F2BF99 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4699C3428770C8800F2BF99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F989D12878EA0200D3D1CA /* Extension.swift in Sources */,
+				B4F989C82878C41400D3D1CA /* UIFonts.swift in Sources */,
+				B4F989C2287884F200D3D1CA /* OnboardingViewControllerOne.swift in Sources */,
+				B4F989BE2878777000D3D1CA /* ViewController.swift in Sources */,
+				B4699C3C28770C8800F2BF99 /* AppDelegate.swift in Sources */,
+				B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */,
+				B4F989C02878833A00D3D1CA /* OnboardingPageViewController.swift in Sources */,
+				B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */,
+				B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B4699C4628770C8B00F2BF99 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4699C4728770C8B00F2BF99 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4699C4A28770C8B00F2BF99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4699C4B28770C8B00F2BF99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4699C4D28770C8B00F2BF99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-Commerce App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.myfirstapp.E-Commerce-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4699C4E28770C8B00F2BF99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "E-Commerce App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chidiogo.myfirstapp.E-Commerce-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4699C3328770C8800F2BF99 /* Build configuration list for PBXProject "E-Commerce App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4699C4A28770C8B00F2BF99 /* Debug */,
+				B4699C4B28770C8B00F2BF99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4699C4C28770C8B00F2BF99 /* Build configuration list for PBXNativeTarget "E-Commerce App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4699C4D28770C8B00F2BF99 /* Debug */,
+				B4699C4E28770C8B00F2BF99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4699C3028770C8800F2BF99 /* Project object */;
+}
