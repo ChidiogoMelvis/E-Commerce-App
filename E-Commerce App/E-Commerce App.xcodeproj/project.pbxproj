@@ -40,6 +40,7 @@
 		B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */; };
 		B4F989C82878C41400D3D1CA /* UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C72878C41400D3D1CA /* UIFonts.swift */; };
 		B4F989D12878EA0200D3D1CA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D02878EA0200D3D1CA /* Extension.swift */; };
+		B4F989D4287B78F100D3D1CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D3287B78F100D3D1CA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerThree.swift; sourceTree = "<group>"; };
 		B4F989C72878C41400D3D1CA /* UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFonts.swift; sourceTree = "<group>"; };
 		B4F989D02878EA0200D3D1CA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B4F989D3287B78F100D3D1CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +114,7 @@
 			children = (
 				B4F989CF2878E6E200D3D1CA /* Delegates */,
 				B4F989D22878ED3B00D3D1CA /* Extensions */,
-				B4F989CC2878E68A00D3D1CA /* CustomFonts */,
+				B4F989CC2878E68A00D3D1CA /* Custom */,
 				B4699C5128771A4900F2BF99 /* Fonts */,
 				B4F989CB2878E66700D3D1CA /* Controllers */,
 				B4F989CD2878E6AB00D3D1CA /* Resources */,
@@ -172,6 +174,7 @@
 			children = (
 				B4F989BD2878777000D3D1CA /* ViewController.swift */,
 				B4F989BF2878833A00D3D1CA /* OnboardingPageViewController.swift */,
+				B4F989D3287B78F100D3D1CA /* LoginViewController.swift */,
 				B4F989C1287884F200D3D1CA /* OnboardingViewControllerOne.swift */,
 				B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */,
 				B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */,
@@ -179,12 +182,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		B4F989CC2878E68A00D3D1CA /* CustomFonts */ = {
+		B4F989CC2878E68A00D3D1CA /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				B4F989C72878C41400D3D1CA /* UIFonts.swift */,
 			);
-			path = CustomFonts;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		B4F989CD2878E6AB00D3D1CA /* Resources */ = {
@@ -320,6 +323,7 @@
 				B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */,
 				B4F989C02878833A00D3D1CA /* OnboardingPageViewController.swift in Sources */,
 				B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */,
+				B4F989D4287B78F100D3D1CA /* LoginViewController.swift in Sources */,
 				B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
