@@ -6,8 +6,9 @@
 //
 
 import UIKit
-// MARK: - Properties of the pagesviewcontrollers
+
 class OnboardingViewControllerThree: UIViewController {
+    // MARK: - Properties of the pagesviewcontrollers
     lazy var topView: UIView = {
         let topView = UIView()
         topView.translatesAutoresizingMaskIntoConstraints = false
