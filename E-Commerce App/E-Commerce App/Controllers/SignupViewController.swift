@@ -20,7 +20,6 @@ class SignupViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var signupLabel: UILabel = {
         let label = UILabel()
         label.contentMode = .scaleAspectFill
@@ -32,7 +31,6 @@ class SignupViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var firstNameTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -49,7 +47,6 @@ class SignupViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "First Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var lastNameTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -66,7 +63,6 @@ class SignupViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var emailPhoneIdTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -83,7 +79,6 @@ class SignupViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "Email ID/Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var signupPasswordTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -100,7 +95,6 @@ class SignupViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var reenterSignupPasswordTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -117,7 +111,6 @@ class SignupViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "Re-enter Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var stackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [firstNameTxtField, lastNameTxtField, emailPhoneIdTxtField, signupPasswordTxtField, reenterSignupPasswordTxtField])
         stack.distribution = .fillEqually
@@ -126,7 +119,6 @@ class SignupViewController: UIViewController {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
-    
     lazy var createAccountButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "white")
@@ -136,7 +128,6 @@ class SignupViewController: UIViewController {
         button.layer.cornerRadius = 24
         return button
     }()
-    
     lazy var haveAnAcctLabel: UILabel = {
         let label = UILabel()
         label.contentMode = .scaleAspectFill
@@ -148,7 +139,6 @@ class SignupViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var signinButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "darkgreen")
@@ -159,20 +149,17 @@ class SignupViewController: UIViewController {
         button.addTarget(self, action: #selector(signinBtnPressed), for: .touchUpInside)
         return button
     }()
-    
     @objc func signinBtnPressed() {
         let viewController = LoginViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "darkgreen")
         setupConstraint()
     }
-    
     func setupConstraint() {
         let subviews = [signupWelcomeLabel, signupLabel, stackView, createAccountButton, haveAnAcctLabel, signinButton]
         for subview in subviews {
@@ -201,6 +188,4 @@ class SignupViewController: UIViewController {
             signinButton.leadingAnchor.constraint(equalTo: haveAnAcctLabel.trailingAnchor, constant: 4),
         ])
     }
-    
-    
 }

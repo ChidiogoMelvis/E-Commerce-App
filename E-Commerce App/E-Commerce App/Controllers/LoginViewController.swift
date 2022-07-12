@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.contentMode = .scaleAspectFill
@@ -32,7 +31,6 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -49,7 +47,6 @@ class LoginViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "Email/Mobile Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var loginPasswordTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
@@ -64,7 +61,6 @@ class LoginViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "white")
@@ -75,7 +71,6 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(loginBtnPressed), for: .touchUpInside)
         return button
     }()
-    
     lazy var forgotButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "darkgreen")
@@ -85,7 +80,6 @@ class LoginViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
     lazy var dontHaveAcctLabel: UILabel = {
         let label = UILabel()
         label.contentMode = .scaleAspectFill
@@ -97,7 +91,6 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var signupButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "darkgreen")
@@ -108,33 +101,28 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(signupBtnPressed), for: .touchUpInside)
         return button
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "darkgreen")
         setupConstraint()
     }
-    
     @objc func signupBtnPressed() {
         let viewController = SignupViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
     }
-    
     @objc func loginBtnPressed() {
         let nextScreen = HomePageViewController()
         nextScreen.modalPresentationStyle = .fullScreen
         self.present(nextScreen, animated: true, completion: nil)
     }
-    
     // MARK: The constraints 
     func setupConstraint() {
         let subviews = [loginWelcomeLabel, loginLabel, emailTextField, loginPasswordTxtField, loginButton, forgotButton, dontHaveAcctLabel, signupButton]
         for subview in subviews {
             view.addSubview(subview)
         }
-        
         NSLayoutConstraint.activate([
             loginWelcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 173),
             loginWelcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -151,7 +139,6 @@ class LoginViewController: UIViewController {
             loginPasswordTxtField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginPasswordTxtField.heightAnchor.constraint(equalToConstant: 48),
             loginPasswordTxtField.widthAnchor.constraint(equalToConstant: 311),
-            
             
             loginButton.topAnchor.constraint(equalTo: loginPasswordTxtField.bottomAnchor, constant: 38),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),

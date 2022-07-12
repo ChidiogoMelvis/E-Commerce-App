@@ -15,7 +15,6 @@ class OnboardingViewControllerOne: UIViewController {
         topView.backgroundColor = UIColor(named: "darkgreen")
         return topView
     }()
-    
     lazy var onboardingImage: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill
@@ -26,7 +25,6 @@ class OnboardingViewControllerOne: UIViewController {
         img.image = img1
         return img
     }()
-    
     lazy var onboardingLabel: UILabel = {
         let label = UILabel()
         label.contentMode = .scaleAspectFill
@@ -38,7 +36,6 @@ class OnboardingViewControllerOne: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var nextButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "darkgreen")
