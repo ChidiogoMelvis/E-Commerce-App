@@ -80,7 +80,7 @@ class SignupViewController: UIViewController {
         textField.layer.cornerRadius = 24
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 311).isActive = true
-        textField.attributedPlaceholder = NSAttributedString(string: "Email ID", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        textField.attributedPlaceholder = NSAttributedString(string: "Email ID/Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
     
@@ -162,8 +162,9 @@ class SignupViewController: UIViewController {
     
     @objc func signinBtnPressed() {
         let viewController = LoginViewController()
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

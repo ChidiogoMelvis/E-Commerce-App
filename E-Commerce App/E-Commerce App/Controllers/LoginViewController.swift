@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
-        textField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        textField.attributedPlaceholder = NSAttributedString(string: "Email/Mobile Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
     
@@ -117,8 +117,9 @@ class LoginViewController: UIViewController {
     
     @objc func signupBtnPressed() {
         let viewController = SignupViewController()
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
     
     @objc func loginBtnPressed() {
