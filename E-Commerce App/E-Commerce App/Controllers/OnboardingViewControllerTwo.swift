@@ -48,7 +48,6 @@ class OnboardingViewControllerTwo: UIViewController {
         button.layer.cornerRadius = 24
         return button
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "white")
@@ -61,7 +60,6 @@ class OnboardingViewControllerTwo: UIViewController {
         for subview in subviews {
             view.addSubview(subview)
         }
-        
         NSLayoutConstraint.activate([
             onboardingImage.topAnchor.constraint(equalTo: topView.safeAreaLayoutGuide.bottomAnchor, constant: -150),
             onboardingImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),

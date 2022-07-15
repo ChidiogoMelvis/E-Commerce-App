@@ -4,12 +4,9 @@
 //
 //  Created by Decagon on 08/07/2022.
 //
-
-import Foundation
 import UIKit
 
 extension OnboardingPageViewController {
-    
     //MARK: - This protocol is for the navigation gestures of the pages viewcontrollers
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = pages.firstIndex(of: viewController), index > 0 else{

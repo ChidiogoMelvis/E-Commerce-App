@@ -39,10 +39,20 @@
 		B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */; };
 		B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */; };
 		B4F989C82878C41400D3D1CA /* UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989C72878C41400D3D1CA /* UIFonts.swift */; };
-		B4F989D12878EA0200D3D1CA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D02878EA0200D3D1CA /* Extension.swift */; };
+		B4F989D12878EA0200D3D1CA /* Extension+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D02878EA0200D3D1CA /* Extension+Protocols.swift */; };
 		B4F989D4287B78F100D3D1CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D3287B78F100D3D1CA /* LoginViewController.swift */; };
 		B4F989DA287C312700D3D1CA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989D9287C312600D3D1CA /* SignupViewController.swift */; };
 		B4F989DC287CC46100D3D1CA /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989DB287CC46000D3D1CA /* HomePageViewController.swift */; };
+		B4F989DE287EEE4C00D3D1CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989DD287EEE4B00D3D1CA /* HomeViewController.swift */; };
+		B4F989E0287EEF0800D3D1CA /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989DF287EEF0800D3D1CA /* BrowseViewController.swift */; };
+		B4F989E2287EEF3400D3D1CA /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989E1287EEF3400D3D1CA /* StoreViewController.swift */; };
+		B4F989E4287EEF5600D3D1CA /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989E3287EEF5600D3D1CA /* OrderHistoryViewController.swift */; };
+		B4F989E6287EEF6B00D3D1CA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989E5287EEF6B00D3D1CA /* ProfileViewController.swift */; };
+		B4F989E9287F033700D3D1CA /* Extension+HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989E8287F033700D3D1CA /* Extension+HomeViewController.swift */; };
+		B4F989EB287F044500D3D1CA /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989EA287F044500D3D1CA /* ProductsVC.swift */; };
+		B4F989EE287F61C800D3D1CA /* Extension+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989ED287F61C800D3D1CA /* Extension+Constraints.swift */; };
+		B4F989F8287FAE8600D3D1CA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F989F7287FAE8600D3D1CA /* Model.swift */; };
+		B4FCCACB2881C345001E25C3 /* Extension+SetupScrollviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCACA2881C345001E25C3 /* Extension+SetupScrollviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,10 +90,20 @@
 		B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerTwo.swift; sourceTree = "<group>"; };
 		B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerThree.swift; sourceTree = "<group>"; };
 		B4F989C72878C41400D3D1CA /* UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFonts.swift; sourceTree = "<group>"; };
-		B4F989D02878EA0200D3D1CA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B4F989D02878EA0200D3D1CA /* Extension+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Protocols.swift"; sourceTree = "<group>"; };
 		B4F989D3287B78F100D3D1CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4F989D9287C312600D3D1CA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B4F989DB287CC46000D3D1CA /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		B4F989DD287EEE4B00D3D1CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B4F989DF287EEF0800D3D1CA /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		B4F989E1287EEF3400D3D1CA /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		B4F989E3287EEF5600D3D1CA /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		B4F989E5287EEF6B00D3D1CA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B4F989E8287F033700D3D1CA /* Extension+HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+HomeViewController.swift"; sourceTree = "<group>"; };
+		B4F989EA287F044500D3D1CA /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		B4F989ED287F61C800D3D1CA /* Extension+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Constraints.swift"; sourceTree = "<group>"; };
+		B4F989F7287FAE8600D3D1CA /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B4FCCACA2881C345001E25C3 /* Extension+SetupScrollviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SetupScrollviews.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +137,12 @@
 			isa = PBXGroup;
 			children = (
 				B4F989CF2878E6E200D3D1CA /* Delegates */,
+				B4F989F9287FAE9400D3D1CA /* New Group */,
 				B4F989D22878ED3B00D3D1CA /* Extensions */,
 				B4F989CC2878E68A00D3D1CA /* Custom */,
 				B4699C5128771A4900F2BF99 /* Fonts */,
 				B4F989CB2878E66700D3D1CA /* Controllers */,
+				B4F989EC287F044D00D3D1CA /* Cells */,
 				B4F989CD2878E6AB00D3D1CA /* Resources */,
 				B4F989CE2878E6C700D3D1CA /* Storyboard */,
 				B4699C4928770C8B00F2BF99 /* Info.plist */,
@@ -179,11 +201,11 @@
 				B4F989BD2878777000D3D1CA /* ViewController.swift */,
 				B4F989BF2878833A00D3D1CA /* OnboardingPageViewController.swift */,
 				B4F989D3287B78F100D3D1CA /* LoginViewController.swift */,
-				B4F989DB287CC46000D3D1CA /* HomePageViewController.swift */,
 				B4F989D9287C312600D3D1CA /* SignupViewController.swift */,
 				B4F989C1287884F200D3D1CA /* OnboardingViewControllerOne.swift */,
 				B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */,
 				B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */,
+				B4F989E7287EEF8400D3D1CA /* TabBarControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,9 +246,41 @@
 		B4F989D22878ED3B00D3D1CA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B4F989D02878EA0200D3D1CA /* Extension.swift */,
+				B4F989D02878EA0200D3D1CA /* Extension+Protocols.swift */,
+				B4F989ED287F61C800D3D1CA /* Extension+Constraints.swift */,
+				B4FCCACA2881C345001E25C3 /* Extension+SetupScrollviews.swift */,
+				B4F989E8287F033700D3D1CA /* Extension+HomeViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B4F989E7287EEF8400D3D1CA /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989DB287CC46000D3D1CA /* HomePageViewController.swift */,
+				B4F989E1287EEF3400D3D1CA /* StoreViewController.swift */,
+				B4F989DF287EEF0800D3D1CA /* BrowseViewController.swift */,
+				B4F989E3287EEF5600D3D1CA /* OrderHistoryViewController.swift */,
+				B4F989E5287EEF6B00D3D1CA /* ProfileViewController.swift */,
+				B4F989DD287EEE4B00D3D1CA /* HomeViewController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		B4F989EC287F044D00D3D1CA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989EA287F044500D3D1CA /* ProductsVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4F989F9287FAE9400D3D1CA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B4F989F7287FAE8600D3D1CA /* Model.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,17 +375,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4F989D12878EA0200D3D1CA /* Extension.swift in Sources */,
+				B4F989E4287EEF5600D3D1CA /* OrderHistoryViewController.swift in Sources */,
+				B4F989D12878EA0200D3D1CA /* Extension+Protocols.swift in Sources */,
 				B4F989C82878C41400D3D1CA /* UIFonts.swift in Sources */,
+				B4F989EB287F044500D3D1CA /* ProductsVC.swift in Sources */,
 				B4F989DA287C312700D3D1CA /* SignupViewController.swift in Sources */,
 				B4F989C2287884F200D3D1CA /* OnboardingViewControllerOne.swift in Sources */,
 				B4F989BE2878777000D3D1CA /* ViewController.swift in Sources */,
+				B4F989E2287EEF3400D3D1CA /* StoreViewController.swift in Sources */,
+				B4FCCACB2881C345001E25C3 /* Extension+SetupScrollviews.swift in Sources */,
+				B4F989F8287FAE8600D3D1CA /* Model.swift in Sources */,
+				B4F989E6287EEF6B00D3D1CA /* ProfileViewController.swift in Sources */,
 				B4699C3C28770C8800F2BF99 /* AppDelegate.swift in Sources */,
+				B4F989E9287F033700D3D1CA /* Extension+HomeViewController.swift in Sources */,
+				B4F989E0287EEF0800D3D1CA /* BrowseViewController.swift in Sources */,
 				B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */,
 				B4F989C02878833A00D3D1CA /* OnboardingPageViewController.swift in Sources */,
 				B4F989DC287CC46100D3D1CA /* HomePageViewController.swift in Sources */,
 				B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */,
 				B4F989D4287B78F100D3D1CA /* LoginViewController.swift in Sources */,
+				B4F989DE287EEE4C00D3D1CA /* HomeViewController.swift in Sources */,
+				B4F989EE287F61C800D3D1CA /* Extension+Constraints.swift in Sources */,
 				B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
