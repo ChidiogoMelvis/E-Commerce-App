@@ -10,7 +10,7 @@ import UIKit
 extension HomeViewController {
     //MARK: - Constraints of the Homeviewcontroller properties
     func setupConstraint() {
-        let subviews = [searchView, titleLabel, heartIcon, cartIcon, searchTextField, searchIcon, scrollView, collectionView]
+        let subviews = [searchView, titleLabel, heartIcon, cartIcon, searchTextField, searchIcon, collectionView]
         for subview in subviews {
             view.addSubview(subview)
         }
@@ -38,23 +38,10 @@ extension HomeViewController {
             searchIcon.topAnchor.constraint(equalTo: searchTextField.topAnchor, constant: 14),
             searchIcon.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor, constant: 18),
             
-            scrollView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 10),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.heightAnchor.constraint(equalToConstant: 170),
-            
-            // 4.
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
-            
-            collectionView.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            collectionView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 5),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -0),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
-    
-    
 }

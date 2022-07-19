@@ -18,6 +18,7 @@ class HomePageViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
+        view.backgroundColor = UIColor(named: "lightGray")
     }
     func setupViewControllers() {
         let vcIcons = [

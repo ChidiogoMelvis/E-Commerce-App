@@ -8,6 +8,7 @@
 import UIKit
 // MARK: - Properties of the Homeviewcontrollers
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     lazy var searchView: UIView = {
         let searchView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 170))
         searchView.backgroundColor = UIColor(named: "darkgreen")
@@ -58,102 +59,32 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return icon
     }()
     
-    lazy var stackView: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.spacing = 20
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
-    }()
-    
-    lazy var scrollView: UIScrollView = {
-        let scrollview = UIScrollView()
-        scrollview.showsHorizontalScrollIndicator = false
-        scrollview.translatesAutoresizingMaskIntoConstraints = false
-        scrollview.addSubview(stackView)
-        return scrollview
-    }()
+    var dashBoardCell = "Cell1"
+    var productCell = "Cell2"
+    var popularProductCell = "Cell3"
+    var stores = "Cell4"
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 2
-        layout.itemSize = CGSize(width: 302, height: 165)
+        layout.scrollDirection = .vertical
         let collectionview = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionview.delegate = self
         collectionview.dataSource = self
+        collectionview.backgroundColor = #colorLiteral(red: 0.9331627488, green: 0.9712334275, blue: 0.9720134139, alpha: 1)
         collectionview.translatesAutoresizingMaskIntoConstraints = false
-        collectionview.register(ProductsVC.self, forCellWithReuseIdentifier: "ProductsVC")
+        collectionview.register(MenuVC.self, forCellWithReuseIdentifier: dashBoardCell)
+        collectionview.register(NewProductsVC.self, forCellWithReuseIdentifier: productCell)
+        collectionview.register(PopularProductsVC.self, forCellWithReuseIdentifier: "Cell3")
+        collectionview.register(StoresToFollowVC.self, forCellWithReuseIdentifier: "Cell4")
+        collectionview.register(NewProductReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NewProductReusableView.identifier)
+        collectionview.register(PopularProductReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: PopularProductReusableView.identifier)
+        collectionview.register(StoreReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: StoreReusableView.identifier)
+        collectionview.register(MenuReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MenuReusableView.identifier)
         return collectionview
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraint()
-        view.backgroundColor = UIColor(named: "white")
-        setupScrollviews()
-        collectionView.collectionViewLayout = createCompositionalLayout()
-    }
-    
-    // MARK: - Creating the three sections for the compositional layout of the collectionview
-    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, layoutEnvironment) -> NSCollectionLayoutSection? in
-            switch sectionNumber {
-            case 0: return self.firstLayoutSection()
-            case 1: return self.secondLayoutSection()
-            default: return self.thirdLayoutSection()
-            }
-        }
-    }
-    // MARK: - First section
-    func firstLayoutSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
-                .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets.bottom = 2
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension:
-                .fractionalHeight(0.5))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = .init(top: 30, leading: 8, bottom: 0, trailing: 2)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        return section
-    }
-    // MARK: - Second section
-    func secondLayoutSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
-                .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets.bottom = 10
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension:
-                .fractionalHeight(0.5))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = .init(top: 30, leading: 8, bottom: 0, trailing: 2)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        return section
-    }
-    // MARK: - Third section
-    func thirdLayoutSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
-                .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets.bottom = 10
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension:
-                .fractionalHeight(0.5))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = .init(top: 30, leading: 8, bottom: 0, trailing: 2)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        return section
     }
 }
-
-
-
