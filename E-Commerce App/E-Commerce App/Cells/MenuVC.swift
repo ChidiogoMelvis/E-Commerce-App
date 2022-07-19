@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: - Menu collectionview section
 class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var cellId = "cellId"
@@ -68,7 +68,8 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+ 
+// MARK: - Subview cells for the Menu collectionview
     class ImageCell: UICollectionViewCell {
         
         lazy var menuView: UIView = {

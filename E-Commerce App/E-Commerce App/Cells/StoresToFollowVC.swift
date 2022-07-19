@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: - Stores collectionview section
 class StoresToFollowVC: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var stores: StoresModel? {
@@ -69,6 +69,7 @@ class StoresToFollowVC: UICollectionViewCell, UICollectionViewDataSource, UIColl
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Subview cells for the Stores collectionview
     class StoresCell: UICollectionViewCell {
         
         lazy var newProductView: UIView = {
@@ -140,5 +141,4 @@ class StoresToFollowVC: UICollectionViewCell, UICollectionViewDataSource, UIColl
             fatalError("init(coder:) has not been implemented")
         }
     }
-    
 }

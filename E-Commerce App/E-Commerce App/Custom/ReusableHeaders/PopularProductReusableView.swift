@@ -6,14 +6,14 @@
 //
 
 import UIKit
-
+// MARK: - Reusableview for the section headers
 class PopularProductReusableView: UICollectionReusableView {
     
     static let identifier = "PopularProductReusableView"
     
     lazy var newProductHeader: UILabel = {
         let label = UILabel()
-        label.text = "New Product"
+        label.text = "Popular Product"
         label.font = customFont(size: 18, font: .MontserratBold)
         label.textColor = UIColor(named: "dark")
         label.translatesAutoresizingMaskIntoConstraints = false

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: - Popular products collectionview section
 class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var popularProducts: PopularProductsModel? {
         didSet{
@@ -68,7 +68,8 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+   
+// MARK: - Subview cells for the Popular products collectionview
     class PopularPoductsCell: UICollectionViewCell {
         
         lazy var newProductView: UIView = {

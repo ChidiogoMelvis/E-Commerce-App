@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+// MARK: - //Model for the collectionview cells
 struct MenuModel {
     var menuImage: UIImage?
     var firstMenuLabel: String

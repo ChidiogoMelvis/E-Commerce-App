@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// MARK: - Propeerties of cells in the collectionview
+// MARK: - New products collectionview section
 class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var newProducts: NewProductsModel? {
@@ -68,7 +68,8 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+  
+// MARK: - Subview cells for the New products collectionview
     class NewPoductsCell: UICollectionViewCell {
         
         lazy var newProductView: UIView = {

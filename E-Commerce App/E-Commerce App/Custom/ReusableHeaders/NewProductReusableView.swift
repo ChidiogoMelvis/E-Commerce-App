@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: - Reusableview for the section headers
 class NewProductReusableView: UICollectionReusableView {
     static let identifier = "NewProductReusableView"
     

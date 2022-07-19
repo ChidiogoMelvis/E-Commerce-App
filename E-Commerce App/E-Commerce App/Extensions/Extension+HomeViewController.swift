@@ -6,7 +6,7 @@
 //
 import UIKit
 extension HomeViewController {
-    // MARK: - Protocols of the collectionview cells in the Homecontrollerview
+    // MARK: - Protocols of the collectionview cells in the Homeviewcontroller
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
     }

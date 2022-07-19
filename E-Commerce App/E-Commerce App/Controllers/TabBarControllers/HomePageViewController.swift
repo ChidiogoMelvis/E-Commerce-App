@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: Homepage for the Tabbarviewcontroller
 class HomePageViewController: UITabBarController {
     let controllers = UITabBarController()
     let firstVC = UINavigationController(rootViewController: HomeViewController())
