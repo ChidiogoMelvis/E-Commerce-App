@@ -29,7 +29,7 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return popularProductsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,6 +47,14 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //        let chatScreen = ChatsViewController()
+        //        chatScreen.modalPresentationStyle = .fullScreen
+        //        chatScreen.modalTransitionStyle = .coverVertical
+        //        show(chatScreen, sender: self)
+        //        chatScreen.chatsLabel.text = chatModel[indexPath.row].name
     }
     
     override init(frame: CGRect) {
@@ -68,14 +76,13 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
-// MARK: - Subview cells for the Popular products collectionview
+    
+    // MARK: - Subview cells for the Popular products collectionview
     class PopularPoductsCell: UICollectionViewCell {
         
         lazy var newProductView: UIView = {
             let view = UIView()
             view.translatesAutoresizingMaskIntoConstraints = false
-            view.layer.cornerRadius = 15
             let items = [imageView, productLabel, appLabel, amountLabel]
             for item in items {
                 self.addSubview(item)
@@ -85,8 +92,11 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
         
         lazy var imageView: UIImageView = {
             let image = UIImageView()
+            image.contentMode = .scaleAspectFill
+            image.clipsToBounds = true
+            image.layer.cornerRadius = 8
+            image.layer.masksToBounds = true
             image.translatesAutoresizingMaskIntoConstraints = false
-            image.layer.cornerRadius = 15
             return image
         }()
         
@@ -128,9 +138,9 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
                 newProductView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
                 newProductView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
                 
-                imageView.topAnchor.constraint(equalTo: newProductView.topAnchor),
-                imageView.leadingAnchor.constraint(equalTo: newProductView.leadingAnchor),
-                imageView.trailingAnchor.constraint(equalTo: newProductView.trailingAnchor),
+                imageView.topAnchor.constraint(equalTo: newProductView.topAnchor, constant: 2),
+                imageView.leadingAnchor.constraint(equalTo: newProductView.leadingAnchor, constant: 2),
+                imageView.trailingAnchor.constraint(equalTo: newProductView.trailingAnchor, constant: -2),
                 imageView.bottomAnchor.constraint(equalTo: newProductView.bottomAnchor, constant: -50),
                 
                 productLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),

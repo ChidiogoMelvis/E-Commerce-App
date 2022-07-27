@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 // MARK: - Properties of the Homeviewcontrollers
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -60,9 +61,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }()
     
     var dashBoardCell = "Cell1"
-    var productCell = "Cell2"
-    var popularProductCell = "Cell3"
-    var stores = "Cell4"
+    var groceriesCell = "Cell2"
+    var productCell = "Cell3"
+    var popularProductCell = "Cell4"
+    var stores = "Cell5"
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -73,9 +75,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionview.backgroundColor = #colorLiteral(red: 0.9331627488, green: 0.9712334275, blue: 0.9720134139, alpha: 1)
         collectionview.translatesAutoresizingMaskIntoConstraints = false
         collectionview.register(MenuVC.self, forCellWithReuseIdentifier: dashBoardCell)
+        collectionview.register(GroceriesVC.self, forCellWithReuseIdentifier: groceriesCell)
         collectionview.register(NewProductsVC.self, forCellWithReuseIdentifier: productCell)
-        collectionview.register(PopularProductsVC.self, forCellWithReuseIdentifier: "Cell3")
-        collectionview.register(StoresToFollowVC.self, forCellWithReuseIdentifier: "Cell4")
+        collectionview.register(PopularProductsVC.self, forCellWithReuseIdentifier: popularProductCell)
+        collectionview.register(StoresToFollowVC.self, forCellWithReuseIdentifier: stores)
         collectionview.register(NewProductReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NewProductReusableView.identifier)
         collectionview.register(PopularProductReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: PopularProductReusableView.identifier)
         collectionview.register(StoreReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: StoreReusableView.identifier)
@@ -88,3 +91,4 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         setupConstraint()
     }
 }
+

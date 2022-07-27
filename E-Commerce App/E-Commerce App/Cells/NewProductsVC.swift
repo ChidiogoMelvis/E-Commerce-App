@@ -30,7 +30,7 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return newProductsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -68,14 +68,13 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-  
-// MARK: - Subview cells for the New products collectionview
+    
+    // MARK: - Subview cells for the New products collectionview
     class NewPoductsCell: UICollectionViewCell {
         
         lazy var newProductView: UIView = {
             let view = UIView()
             view.translatesAutoresizingMaskIntoConstraints = false
-            view.layer.cornerRadius = 15
             let items = [imageView, productLabel, appLabel, amountLabel]
             for item in items {
                 self.addSubview(item)
@@ -85,6 +84,10 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
         
         lazy var imageView: UIImageView = {
             let image = UIImageView()
+            image.layer.cornerRadius = 8
+            image.contentMode = .scaleAspectFill
+            image.clipsToBounds = true
+            image.layer.masksToBounds = true
             image.translatesAutoresizingMaskIntoConstraints = false
             return image
         }()
@@ -116,20 +119,21 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
             super.init(frame: frame)
             backgroundColor = UIColor(named: "white")
             layer.cornerRadius = 15
+            //layer.cornerRadius = 15
             setupViews()
         }
         
         func setupViews() {
             self.addSubview(newProductView)
             NSLayoutConstraint.activate([
-                newProductView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-                newProductView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-                newProductView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-                newProductView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
+                newProductView.topAnchor.constraint(equalTo: self.topAnchor),
+                newProductView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                newProductView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                newProductView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
                 
                 imageView.topAnchor.constraint(equalTo: newProductView.topAnchor, constant: 2),
-                imageView.leadingAnchor.constraint(equalTo: newProductView.leadingAnchor),
-                imageView.trailingAnchor.constraint(equalTo: newProductView.trailingAnchor),
+                imageView.leadingAnchor.constraint(equalTo: newProductView.leadingAnchor, constant: 2),
+                imageView.trailingAnchor.constraint(equalTo: newProductView.trailingAnchor, constant: -2),
                 imageView.bottomAnchor.constraint(equalTo: newProductView.bottomAnchor, constant: -50),
                 
                 productLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),

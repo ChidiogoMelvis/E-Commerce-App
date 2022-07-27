@@ -38,7 +38,7 @@ extension HomeViewController {
             searchIcon.topAnchor.constraint(equalTo: searchTextField.topAnchor, constant: 14),
             searchIcon.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor, constant: 18),
             
-            collectionView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 5),
+            collectionView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 0),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -0),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),

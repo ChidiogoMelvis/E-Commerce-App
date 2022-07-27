@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B463631D28889D3A00733609 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463631C28889D3A00733609 /* BeveragesViewController.swift */; };
+		B463632128909D8400733609 /* BreadBakeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632028909D8400733609 /* BreadBakeryViewController.swift */; };
+		B463632328909DCE00733609 /* VegetablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632228909DCE00733609 /* VegetablesViewController.swift */; };
+		B463632528909DE800733609 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632428909DE800733609 /* FruitViewController.swift */; };
+		B463632728909DFC00733609 /* EggViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632628909DFC00733609 /* EggViewController.swift */; };
+		B463632928909E1100733609 /* FrozenVegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632828909E1100733609 /* FrozenVegViewController.swift */; };
+		B463632B28909E2600733609 /* HomeCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632A28909E2600733609 /* HomeCareViewController.swift */; };
+		B463632D28909E3A00733609 /* PetCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632C28909E3A00733609 /* PetCareViewController.swift */; };
+		B463632F2890D74800733609 /* GroceriesCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632E2890D74800733609 /* GroceriesCellProtocol.swift */; };
 		B4699C3C28770C8800F2BF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4699C3B28770C8800F2BF99 /* AppDelegate.swift */; };
 		B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */; };
 		B4699C4528770C8B00F2BF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4699C4428770C8B00F2BF99 /* Assets.xcassets */; };
@@ -59,9 +68,20 @@
 		B4FCCAE728865B6C001E25C3 /* PopularProductReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCAE628865B6C001E25C3 /* PopularProductReusableView.swift */; };
 		B4FCCAE928865B89001E25C3 /* StoreReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCAE828865B89001E25C3 /* StoreReusableView.swift */; };
 		B4FCCAED2886BD9A001E25C3 /* MenuReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCAEC2886BD9A001E25C3 /* MenuReusableView.swift */; };
+		B4FCCB1128877E29001E25C3 /* GroceriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCB1028877E29001E25C3 /* GroceriesVC.swift */; };
+		B4FCCB13288789C4001E25C3 /* GroceriesReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCB12288789C4001E25C3 /* GroceriesReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B463631C28889D3A00733609 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
+		B463632028909D8400733609 /* BreadBakeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadBakeryViewController.swift; sourceTree = "<group>"; };
+		B463632228909DCE00733609 /* VegetablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetablesViewController.swift; sourceTree = "<group>"; };
+		B463632428909DE800733609 /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
+		B463632628909DFC00733609 /* EggViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggViewController.swift; sourceTree = "<group>"; };
+		B463632828909E1100733609 /* FrozenVegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrozenVegViewController.swift; sourceTree = "<group>"; };
+		B463632A28909E2600733609 /* HomeCareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCareViewController.swift; sourceTree = "<group>"; };
+		B463632C28909E3A00733609 /* PetCareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareViewController.swift; sourceTree = "<group>"; };
+		B463632E2890D74800733609 /* GroceriesCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesCellProtocol.swift; sourceTree = "<group>"; };
 		B4699C3828770C8800F2BF99 /* E-Commerce App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Commerce App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4699C3B28770C8800F2BF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +136,8 @@
 		B4FCCAE628865B6C001E25C3 /* PopularProductReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductReusableView.swift; sourceTree = "<group>"; };
 		B4FCCAE828865B89001E25C3 /* StoreReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReusableView.swift; sourceTree = "<group>"; };
 		B4FCCAEC2886BD9A001E25C3 /* MenuReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuReusableView.swift; sourceTree = "<group>"; };
+		B4FCCB1028877E29001E25C3 /* GroceriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesVC.swift; sourceTree = "<group>"; };
+		B4FCCB12288789C4001E25C3 /* GroceriesReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +151,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B463631B28889C8700733609 /* GroceriesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B463631C28889D3A00733609 /* BeveragesViewController.swift */,
+				B463632028909D8400733609 /* BreadBakeryViewController.swift */,
+				B463632228909DCE00733609 /* VegetablesViewController.swift */,
+				B463632428909DE800733609 /* FruitViewController.swift */,
+				B463632628909DFC00733609 /* EggViewController.swift */,
+				B463632828909E1100733609 /* FrozenVegViewController.swift */,
+				B463632A28909E2600733609 /* HomeCareViewController.swift */,
+				B463632C28909E3A00733609 /* PetCareViewController.swift */,
+			);
+			path = GroceriesControllers;
+			sourceTree = "<group>";
+		};
 		B4699C2F28770C8800F2BF99 = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				B4F989CF2878E6E200D3D1CA /* Delegates */,
-				B4F989F9287FAE9400D3D1CA /* New Group */,
+				B4F989F9287FAE9400D3D1CA /* Model */,
 				B4F989D22878ED3B00D3D1CA /* Extensions */,
 				B4FCCAE328865B02001E25C3 /* ReusableHeaders */,
 				B4F989CC2878E68A00D3D1CA /* Custom */,
@@ -219,6 +256,7 @@
 				B4F989C32878851200D3D1CA /* OnboardingViewControllerTwo.swift */,
 				B4F989C52878852A00D3D1CA /* OnboardingViewControllerThree.swift */,
 				B4F989E7287EEF8400D3D1CA /* TabBarControllers */,
+				B463631B28889C8700733609 /* GroceriesControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				B4F989D02878EA0200D3D1CA /* Extension+Protocols.swift */,
+				B463632E2890D74800733609 /* GroceriesCellProtocol.swift */,
 				B4F989ED287F61C800D3D1CA /* Extension+Constraints.swift */,
 				B4F989E8287F033700D3D1CA /* Extension+HomeViewController.swift */,
 			);
@@ -283,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FCCAD028844E68001E25C3 /* MenuVC.swift */,
+				B4FCCB1028877E29001E25C3 /* GroceriesVC.swift */,
 				B4F989EA287F044500D3D1CA /* NewProductsVC.swift */,
 				B4FCCADF28860614001E25C3 /* PopularProductsVC.swift */,
 				B4FCCAE128860632001E25C3 /* StoresToFollowVC.swift */,
@@ -290,19 +330,20 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		B4F989F9287FAE9400D3D1CA /* New Group */ = {
+		B4F989F9287FAE9400D3D1CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B4F989F7287FAE8600D3D1CA /* Model.swift */,
 			);
-			path = "New Group";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B4FCCAE328865B02001E25C3 /* ReusableHeaders */ = {
 			isa = PBXGroup;
 			children = (
-				B4FCCAE428865B50001E25C3 /* NewProductReusableView.swift */,
 				B4FCCAEC2886BD9A001E25C3 /* MenuReusableView.swift */,
+				B4FCCB12288789C4001E25C3 /* GroceriesReusableView.swift */,
+				B4FCCAE428865B50001E25C3 /* NewProductReusableView.swift */,
 				B4FCCAE628865B6C001E25C3 /* PopularProductReusableView.swift */,
 				B4FCCAE828865B89001E25C3 /* StoreReusableView.swift */,
 			);
@@ -409,27 +450,38 @@
 				B4F989C82878C41400D3D1CA /* UIFonts.swift in Sources */,
 				B4F989EB287F044500D3D1CA /* NewProductsVC.swift in Sources */,
 				B4F989DA287C312700D3D1CA /* SignupViewController.swift in Sources */,
+				B463632528909DE800733609 /* FruitViewController.swift in Sources */,
 				B4F989C2287884F200D3D1CA /* OnboardingViewControllerOne.swift in Sources */,
 				B4F989BE2878777000D3D1CA /* ViewController.swift in Sources */,
 				B4F989E2287EEF3400D3D1CA /* StoreViewController.swift in Sources */,
 				B4F989F8287FAE8600D3D1CA /* Model.swift in Sources */,
 				B4F989E6287EEF6B00D3D1CA /* ProfileViewController.swift in Sources */,
+				B463632328909DCE00733609 /* VegetablesViewController.swift in Sources */,
 				B4699C3C28770C8800F2BF99 /* AppDelegate.swift in Sources */,
 				B4F989E9287F033700D3D1CA /* Extension+HomeViewController.swift in Sources */,
 				B4FCCAE728865B6C001E25C3 /* PopularProductReusableView.swift in Sources */,
+				B463632728909DFC00733609 /* EggViewController.swift in Sources */,
 				B4F989E0287EEF0800D3D1CA /* BrowseViewController.swift in Sources */,
 				B4FCCAE228860632001E25C3 /* StoresToFollowVC.swift in Sources */,
 				B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */,
+				B463632B28909E2600733609 /* HomeCareViewController.swift in Sources */,
 				B4F989C02878833A00D3D1CA /* OnboardingPageViewController.swift in Sources */,
 				B4F989DC287CC46100D3D1CA /* HomePageViewController.swift in Sources */,
 				B4F989C62878852A00D3D1CA /* OnboardingViewControllerThree.swift in Sources */,
+				B463632128909D8400733609 /* BreadBakeryViewController.swift in Sources */,
+				B4FCCB13288789C4001E25C3 /* GroceriesReusableView.swift in Sources */,
 				B4FCCAE928865B89001E25C3 /* StoreReusableView.swift in Sources */,
 				B4FCCAE028860614001E25C3 /* PopularProductsVC.swift in Sources */,
+				B463632D28909E3A00733609 /* PetCareViewController.swift in Sources */,
+				B463631D28889D3A00733609 /* BeveragesViewController.swift in Sources */,
+				B4FCCB1128877E29001E25C3 /* GroceriesVC.swift in Sources */,
 				B4F989D4287B78F100D3D1CA /* LoginViewController.swift in Sources */,
 				B4FCCAED2886BD9A001E25C3 /* MenuReusableView.swift in Sources */,
 				B4F989DE287EEE4C00D3D1CA /* HomeViewController.swift in Sources */,
+				B463632928909E1100733609 /* FrozenVegViewController.swift in Sources */,
 				B4F989EE287F61C800D3D1CA /* Extension+Constraints.swift in Sources */,
 				B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */,
+				B463632F2890D74800733609 /* GroceriesCellProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

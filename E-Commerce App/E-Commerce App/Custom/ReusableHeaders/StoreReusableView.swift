@@ -25,7 +25,7 @@ class StoreReusableView: UICollectionReusableView {
         button.backgroundColor = UIColor(named: "darkgreen")
         button.setTitle("View all", for: .normal)
         button.setTitleColor(UIColor(named: "whie"), for: .normal)
-        button.layer.cornerRadius = 15
+        button.layer.cornerRadius = 13
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -43,11 +43,11 @@ class StoreReusableView: UICollectionReusableView {
     func setupHeaders() {
         NSLayoutConstraint.activate([
             newProductHeader.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            newProductHeader.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 20),
+            newProductHeader.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             
             seeAllBtn.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            seeAllBtn.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 20),
-            seeAllBtn.heightAnchor.constraint(equalToConstant: 30),
+            seeAllBtn.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            seeAllBtn.heightAnchor.constraint(equalToConstant: 25),
             seeAllBtn.widthAnchor.constraint(equalToConstant: 120),
         ])
     }

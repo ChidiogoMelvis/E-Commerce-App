@@ -32,7 +32,7 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return menuArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,21 +61,23 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
             collectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
- 
-// MARK: - Subview cells for the Menu collectionview
+    
+    // MARK: - Subview cells for the Menu collectionview
     class ImageCell: UICollectionViewCell {
         
         lazy var menuView: UIView = {
             let view = UIView()
+            view.layer.cornerRadius = 8
+            view.layer.masksToBounds = true
+            view.clipsToBounds = true
             view.translatesAutoresizingMaskIntoConstraints = false
-            view.layer.cornerRadius = 15
             let items = [menuImage, menuFirstLabel, menuSecondLabel]
             for item in items {
                 self.addSubview(item)
@@ -88,8 +90,8 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
             image.translatesAutoresizingMaskIntoConstraints = false
             image.contentMode = .scaleAspectFill
             image.clipsToBounds = true
-            image.alpha = 0.9
-            image.layer.cornerRadius = 14
+            image.layer.cornerRadius = 8
+            image.layer.masksToBounds = true
             return image
         }()
         
@@ -118,7 +120,6 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
         override init(frame: CGRect) {
             super.init(frame: frame)
             setupSubviews()
-            layer.cornerRadius = 15
         }
         
         func setupSubviews() {
