@@ -26,7 +26,6 @@ class GroceriesVC: UICollectionViewCell, UICollectionViewDataSource, UICollectio
         collection.dataSource = self
         collection.backgroundColor = #colorLiteral(red: 0.9331627488, green: 0.9712334275, blue: 0.9720134139, alpha: 1)
         collection.register(GroceriesCell.self, forCellWithReuseIdentifier: cell)
-        
         return collection
     }()
     
@@ -87,7 +86,12 @@ class GroceriesVC: UICollectionViewCell, UICollectionViewDataSource, UICollectio
         }
     }
     
-    var didSelectItem: (() -> ())?
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            cell.contentView.backgroundColor = UIColor(named: "darkgray")
+        }
+    }
+    
     func setupCollectionViews() {
         self.addSubview(collectionView)
         NSLayoutConstraint.activate([

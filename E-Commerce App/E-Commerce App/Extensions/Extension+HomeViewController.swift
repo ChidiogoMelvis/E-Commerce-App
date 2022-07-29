@@ -53,7 +53,7 @@ extension HomeViewController {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if section == 0 {
-            return UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
+            return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 15)
         }else if section == 1{
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }else if section == 4{
@@ -91,12 +91,12 @@ extension HomeViewController {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: StoreReusableView.identifier, for: indexPath) as! StoreReusableView
             header.configure()
             return header
-        
         }else {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MenuReusableView.identifier, for: indexPath) as! MenuReusableView
             header.configure()
             return header
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

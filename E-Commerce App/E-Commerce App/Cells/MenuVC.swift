@@ -27,7 +27,6 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
         collectionview.backgroundColor = #colorLiteral(red: 0.9331627488, green: 0.9712334275, blue: 0.9720134139, alpha: 1)
         collectionview.translatesAutoresizingMaskIntoConstraints = false
         collectionview.register(ImageCell.self, forCellWithReuseIdentifier: cellId)
-        
         return collectionview
     }()
     
@@ -58,7 +57,7 @@ class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDa
     func setupSubviews() {
         self.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),

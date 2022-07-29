@@ -49,14 +49,6 @@ class PopularProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICol
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        let chatScreen = ChatsViewController()
-        //        chatScreen.modalPresentationStyle = .fullScreen
-        //        chatScreen.modalTransitionStyle = .coverVertical
-        //        show(chatScreen, sender: self)
-        //        chatScreen.chatsLabel.text = chatModel[indexPath.row].name
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(named: "white")

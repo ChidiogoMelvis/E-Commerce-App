@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Properties of the pagesviewcontrollers
     lazy var signupWelcomeLabel: UILabel = {
         let label = UILabel()
@@ -42,6 +44,9 @@ class SignupViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 311).isActive = true
         textField.attributedPlaceholder = NSAttributedString(string: "First Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -58,12 +63,15 @@ class SignupViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 311).isActive = true
         textField.attributedPlaceholder = NSAttributedString(string: "Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
-    lazy var emailPhoneIdTxtField: UITextField = {
+    lazy var emailAddressTxtField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -74,9 +82,12 @@ class SignupViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 311).isActive = true
-        textField.attributedPlaceholder = NSAttributedString(string: "Email ID/Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        textField.attributedPlaceholder = NSAttributedString(string: "Email Address", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
     lazy var signupPasswordTxtField: UITextField = {
@@ -90,6 +101,10 @@ class SignupViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
+        textField.isSecureTextEntry = true
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 311).isActive = true
         textField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -106,13 +121,17 @@ class SignupViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
+        textField.isSecureTextEntry = true
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 311).isActive = true
         textField.attributedPlaceholder = NSAttributedString(string: "Re-enter Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
     lazy var stackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [firstNameTxtField, lastNameTxtField, emailPhoneIdTxtField, signupPasswordTxtField, reenterSignupPasswordTxtField])
+        let stack = UIStackView(arrangedSubviews: [firstNameTxtField, lastNameTxtField, emailAddressTxtField, signupPasswordTxtField, reenterSignupPasswordTxtField])
         stack.distribution = .fillEqually
         stack.axis = .vertical
         stack.spacing = 16
@@ -126,6 +145,7 @@ class SignupViewController: UIViewController {
         button.setTitleColor(UIColor(named: "green"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 24
+        button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         return button
     }()
     lazy var haveAnAcctLabel: UILabel = {
@@ -153,13 +173,53 @@ class SignupViewController: UIViewController {
         let viewController = LoginViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true, completion: nil)
+        self.present(navigationController, animated: true, completion: nil)
     }
+  //MARK: - This function checks the validity of the textfield, and calls the create user function at the end.
+    @objc func handleSignup() {
+        guard let email = emailAddressTxtField.text else { return }
+        guard let password = signupPasswordTxtField.text else { return }
+        guard let reEnterPassword = reenterSignupPasswordTxtField.text else { return }
+        guard let firstName = firstNameTxtField.text else { return }
+        guard let lastName = lastNameTxtField.text else { return }
+        
+        createUser(withEmail: email, password: password, reEnterPassword: reEnterPassword, firstName: firstName, lastName: lastName)
+    }
+// MARK: - This function creates user programmatically
+    func createUser(withEmail email: String, password: String, reEnterPassword: String, firstName: String, lastName: String) {
+        let details = ["email": email, "firstName": firstName, "lastName": lastName]
+        Auth.auth().createUser(withEmail: emailAddressTxtField.text!, password: signupPasswordTxtField.text!) { result, error in
+            if error != nil {
+                let alertController = UIAlertController(title: "Error", message: "Please fill your details", preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            
+            guard let uid = result?.user.uid else { return }
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(details, withCompletionBlock: { (error, ref ) in
+                if let error = error {
+                    print("failed to update database values with error: ", error.localizedDescription  )
+                    return
+                }
+                print("successfully signed user up")
+                let viewController = HomePageViewController()
+                let navigationController = UINavigationController(rootViewController: viewController)
+                navigationController.modalPresentationStyle = .fullScreen
+                self.present(navigationController, animated: true, completion: nil)
+            })
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "darkgreen")
         setupConstraint()
     }
+    
     func setupConstraint() {
         let subviews = [signupWelcomeLabel, signupLabel, stackView, createAccountButton, haveAnAcctLabel, signinButton]
         for subview in subviews {
@@ -187,5 +247,20 @@ class SignupViewController: UIViewController {
             signinButton.topAnchor.constraint(equalTo: createAccountButton.bottomAnchor, constant: 32),
             signinButton.leadingAnchor.constraint(equalTo: haveAnAcctLabel.trailingAnchor, constant: 4),
         ])
+    }
+}
+
+extension SignupViewController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameTxtField.resignFirstResponder()
+        lastNameTxtField.resignFirstResponder()
+        emailAddressTxtField.resignFirstResponder()
+        signupPasswordTxtField.resignFirstResponder()
+        reenterSignupPasswordTxtField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
     }
 }

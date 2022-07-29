@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Properties of the pagesviewcontrollers
     lazy var loginWelcomeLabel: UILabel = {
         let label = UILabel()
@@ -31,7 +33,7 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    lazy var emailTextField: UITextField = {
+    lazy var loginEmailTextField: UITextField = {
         let textField = UITextField()
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
         textField.leftViewMode = .always
@@ -44,7 +46,10 @@ class LoginViewController: UIViewController {
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
         textField.layer.cornerRadius = 24
-        textField.attributedPlaceholder = NSAttributedString(string: "Email/Mobile Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.delegate = self
+        textField.attributedPlaceholder = NSAttributedString(string: "Email Address", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
     lazy var loginPasswordTxtField: UITextField = {
@@ -57,7 +62,11 @@ class LoginViewController: UIViewController {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textField.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.5647058824, blue: 0.4862745098, alpha: 1)
+        textField.isSecureTextEntry = true
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.layer.cornerRadius = 24
+        textField.delegate = self
         textField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textField
     }()
@@ -106,6 +115,7 @@ class LoginViewController: UIViewController {
         view.backgroundColor = UIColor(named: "darkgreen")
         setupConstraint()
     }
+    
     @objc func signupBtnPressed() {
         let viewController = SignupViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
@@ -113,13 +123,46 @@ class LoginViewController: UIViewController {
         present(navigationController, animated: true, completion: nil)
     }
     @objc func loginBtnPressed() {
-        let nextScreen = HomePageViewController()
-        nextScreen.modalPresentationStyle = .fullScreen
-        self.present(nextScreen, animated: true, completion: nil)
+        if self.loginEmailTextField.text == "" || self.loginPasswordTxtField.text == "" {
+            
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            Auth.auth().signIn(withEmail: self.loginEmailTextField.text!, password: self.loginPasswordTxtField.text!) { (user, error) in
+                
+                if error == nil {
+                    
+                    //Print into the console if successfully logged in
+                    print("You have successfully logged in")
+                    
+                    //Go to the HomeViewController if the login is sucessful
+                    let nextScreen = HomePageViewController()
+                    nextScreen.modalPresentationStyle = .fullScreen
+                    self.present(nextScreen, animated: true, completion: nil)
+                } else {
+                    //Tells the user that there is an error and then gets firebase to tell them the error
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
     }
+    
     // MARK: The constraints 
     func setupConstraint() {
-        let subviews = [loginWelcomeLabel, loginLabel, emailTextField, loginPasswordTxtField, loginButton, forgotButton, dontHaveAcctLabel, signupButton]
+        let subviews = [loginWelcomeLabel, loginLabel, loginEmailTextField, loginPasswordTxtField, loginButton, forgotButton, dontHaveAcctLabel, signupButton]
         for subview in subviews {
             view.addSubview(subview)
         }
@@ -130,12 +173,12 @@ class LoginViewController: UIViewController {
             loginLabel.topAnchor.constraint(equalTo: loginWelcomeLabel.bottomAnchor, constant: 66),
             loginLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            emailTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 45),
-            emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            emailTextField.heightAnchor.constraint(equalToConstant: 48),
-            emailTextField.widthAnchor.constraint(equalToConstant: 311),
+            loginEmailTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 45),
+            loginEmailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginEmailTextField.heightAnchor.constraint(equalToConstant: 48),
+            loginEmailTextField.widthAnchor.constraint(equalToConstant: 311),
             
-            loginPasswordTxtField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 16),
+            loginPasswordTxtField.topAnchor.constraint(equalTo: loginEmailTextField.bottomAnchor, constant: 16),
             loginPasswordTxtField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginPasswordTxtField.heightAnchor.constraint(equalToConstant: 48),
             loginPasswordTxtField.widthAnchor.constraint(equalToConstant: 311),
@@ -154,5 +197,16 @@ class LoginViewController: UIViewController {
             signupButton.topAnchor.constraint(equalTo: forgotButton.bottomAnchor, constant: 39),
             signupButton.leadingAnchor.constraint(equalTo: dontHaveAcctLabel.trailingAnchor, constant: 2),
         ])
+    }
+}
+
+extension LoginViewController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        loginEmailTextField.resignFirstResponder()
+        loginPasswordTxtField.resignFirstResponder()
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
     }
 }

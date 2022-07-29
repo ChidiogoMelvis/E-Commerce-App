@@ -26,18 +26,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return label
     }()
     
-    lazy var heartIcon: UIImageView = {
-        let icon = UIImageView()
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.image = UIImage(named: "heart")
-        return icon
+    lazy var heartIcon: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "heart"), for: .normal)
+        return button
     }()
     
-    lazy var cartIcon: UIImageView = {
-        let icon = UIImageView()
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.image = UIImage(named: "cart")
-        return icon
+    lazy var cartIcon: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "cart"), for: .normal)
+        return button
     }()
     
     lazy var searchTextField: UITextField = {
