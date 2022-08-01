@@ -7,7 +7,7 @@
 
 import UIKit
 // MARK: - Menu collectionview section
-class MenuVC: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MenuCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var cellId = "cellId"
     

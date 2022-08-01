@@ -144,7 +144,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
-                    let nextScreen = HomePageViewController()
+                    let nextScreen = TabBarViewController()
                     nextScreen.modalPresentationStyle = .fullScreen
                     self.present(nextScreen, animated: true, completion: nil)
                 } else {

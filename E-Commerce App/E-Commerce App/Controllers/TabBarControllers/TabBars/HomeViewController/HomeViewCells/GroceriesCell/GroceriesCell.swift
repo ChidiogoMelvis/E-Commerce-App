@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GroceriesVC: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class GroceriesCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var cell = "Cell"
     var delegate: CellSelectedDelegate?

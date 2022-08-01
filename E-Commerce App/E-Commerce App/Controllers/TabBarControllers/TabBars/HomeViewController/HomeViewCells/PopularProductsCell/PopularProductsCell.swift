@@ -1,15 +1,14 @@
 //
-//  HomeCollectionViewCell.swift
+//  PopularProductsVC.swift
 //  E-Commerce App
 //
-//  Created by Decagon on 13/07/2022.
+//  Created by Decagon on 18/07/2022.
 //
 
 import UIKit
-// MARK: - New products collectionview section
-class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    var newProducts: NewProductsModel? {
+// MARK: - Popular products collectionview section
+class PopularProductsCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var popularProducts: PopularProductsModel? {
         didSet{
             collectionView.reloadData()
         }
@@ -25,20 +24,20 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
         collectionview.delegate = self
         collectionview.backgroundColor = #colorLiteral(red: 0.9331627488, green: 0.9712334275, blue: 0.9720134139, alpha: 1)
         collectionview.translatesAutoresizingMaskIntoConstraints = false
-        collectionview.register(NewPoductsCell.self, forCellWithReuseIdentifier: productCell)
+        collectionview.register(PopularPoductsCell.self, forCellWithReuseIdentifier: productCell)
         return collectionview
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return newProductsArray.count
+        return popularProductsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCell, for: indexPath) as! NewPoductsCell
-        cell.imageView.image = newProductsArray[indexPath.item].productImage
-        cell.productLabel.text = newProductsArray[indexPath.item].productName
-        cell.appLabel.text = newProductsArray[indexPath.item].appName
-        cell.amountLabel.text = newProductsArray[indexPath.row].productAmount
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCell, for: indexPath) as! PopularPoductsCell
+        cell.imageView.image = popularProductsArray[indexPath.item].productImage
+        cell.productLabel.text = popularProductsArray[indexPath.item].productName
+        cell.appLabel.text = popularProductsArray[indexPath.item].appName
+        cell.amountLabel.text = popularProductsArray[indexPath.row].productAmount
         return cell
     }
     
@@ -52,6 +51,7 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor(named: "white")
         setupViews()
     }
     
@@ -59,9 +59,9 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
         self.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 5),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
         ])
     }
     
@@ -69,8 +69,8 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Subview cells for the New products collectionview
-    class NewPoductsCell: UICollectionViewCell {
+    // MARK: - Subview cells for the Popular products collectionview
+    class PopularPoductsCell: UICollectionViewCell {
         
         lazy var newProductView: UIView = {
             let view = UIView()
@@ -84,9 +84,9 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
         
         lazy var imageView: UIImageView = {
             let image = UIImageView()
-            image.layer.cornerRadius = 8
             image.contentMode = .scaleAspectFill
             image.clipsToBounds = true
+            image.layer.cornerRadius = 8
             image.layer.masksToBounds = true
             image.translatesAutoresizingMaskIntoConstraints = false
             return image
@@ -119,17 +119,16 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
             super.init(frame: frame)
             backgroundColor = UIColor(named: "white")
             layer.cornerRadius = 15
-            //layer.cornerRadius = 15
             setupViews()
         }
         
         func setupViews() {
             self.addSubview(newProductView)
             NSLayoutConstraint.activate([
-                newProductView.topAnchor.constraint(equalTo: self.topAnchor),
-                newProductView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                newProductView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                newProductView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                newProductView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+                newProductView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+                newProductView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+                newProductView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
                 
                 imageView.topAnchor.constraint(equalTo: newProductView.topAnchor, constant: 2),
                 imageView.leadingAnchor.constraint(equalTo: newProductView.leadingAnchor, constant: 2),
@@ -146,7 +145,6 @@ class NewProductsVC: UICollectionViewCell, UICollectionViewDataSource, UICollect
                 amountLabel.trailingAnchor.constraint(equalTo: newProductView.trailingAnchor, constant: -10),
             ])
         }
-        
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }

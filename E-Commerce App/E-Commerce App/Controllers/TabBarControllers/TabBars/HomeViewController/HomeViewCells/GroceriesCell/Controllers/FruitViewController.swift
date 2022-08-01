@@ -62,7 +62,7 @@ class FruitViewController: UIViewController {
         setupView()
     }
     func setupView() {
-        let subviews = [fruitView, sortTextField, sortIcon, locationTextField, locationIcon, categoryTextField, categoryIcon]
+        let subviews = [fruitView, fruitTitleLabel, sortTextField, locationTextField, categoryTextField, sortIcon, locationIcon, categoryIcon]
         for subview in subviews {
             view.addSubview(subview)
         }

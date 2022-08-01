@@ -10,14 +10,14 @@ import UIKit
 // MARK: - Properties of the Homeviewcontrollers
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    lazy var searchView: UIView = {
+    lazy var topView: UIView = {
         let searchView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 170))
         searchView.backgroundColor = UIColor(named: "darkgreen")
         searchView.translatesAutoresizingMaskIntoConstraints = false
         return searchView
     }()
     
-    lazy var titleLabel: UILabel = {
+    lazy var groceriesTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Groceries"
         label.font = customFont(size: 24, font: .MontserratBold)
@@ -74,11 +74,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionview.dataSource = self
         collectionview.backgroundColor = #colorLiteral(red: 0.9331627488, green: 0.9712334275, blue: 0.9720134139, alpha: 1)
         collectionview.translatesAutoresizingMaskIntoConstraints = false
-        collectionview.register(MenuVC.self, forCellWithReuseIdentifier: dashBoardCell)
-        collectionview.register(GroceriesVC.self, forCellWithReuseIdentifier: groceriesCell)
-        collectionview.register(NewProductsVC.self, forCellWithReuseIdentifier: productCell)
-        collectionview.register(PopularProductsVC.self, forCellWithReuseIdentifier: popularProductCell)
-        collectionview.register(StoresToFollowVC.self, forCellWithReuseIdentifier: stores)
+        collectionview.register(MenuCell.self, forCellWithReuseIdentifier: dashBoardCell)
+        collectionview.register(GroceriesCell.self, forCellWithReuseIdentifier: groceriesCell)
+        collectionview.register(NewProductsCell.self, forCellWithReuseIdentifier: productCell)
+        collectionview.register(PopularProductsCell.self, forCellWithReuseIdentifier: popularProductCell)
+        collectionview.register(StoresToFollowCell.self, forCellWithReuseIdentifier: stores)
         collectionview.register(NewProductReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NewProductReusableView.identifier)
         collectionview.register(PopularProductReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: PopularProductReusableView.identifier)
         collectionview.register(StoreReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: StoreReusableView.identifier)

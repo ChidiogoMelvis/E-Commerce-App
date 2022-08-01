@@ -17,24 +17,24 @@ extension HomeViewController {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dashBoardCell, for: indexPath) as! MenuVC
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dashBoardCell, for: indexPath) as! MenuCell
             cell.menu = menuArray
             return cell
         }else if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: groceriesCell, for: indexPath) as! GroceriesVC
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: groceriesCell, for: indexPath) as! GroceriesCell
                 cell.groceries = groceriesArray[indexPath.item]
                 cell.delegate = self
                 return cell
         }else if indexPath.section == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCell, for: indexPath) as! NewProductsVC
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCell, for: indexPath) as! NewProductsCell
             cell.newProducts = newProductsArray[indexPath.item]
             return cell
         }else if indexPath.section == 3 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: popularProductCell, for: indexPath) as! PopularProductsVC
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: popularProductCell, for: indexPath) as! PopularProductsCell
             cell.popularProducts = popularProductsArray[indexPath.item]
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: stores, for: indexPath) as! StoresToFollowVC
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: stores, for: indexPath) as! StoresToFollowCell
             cell.stores = storeArray[indexPath.item]
             return cell
         }

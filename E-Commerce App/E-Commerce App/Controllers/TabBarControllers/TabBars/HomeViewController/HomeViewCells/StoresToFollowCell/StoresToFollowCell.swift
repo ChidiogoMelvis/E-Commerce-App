@@ -7,7 +7,7 @@
 
 import UIKit
 // MARK: - Stores collectionview section
-class StoresToFollowVC: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class StoresToFollowCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var stores: StoresModel? {
         didSet{

@@ -206,7 +206,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
                 print("successfully signed user up")
-                let viewController = HomePageViewController()
+                let viewController = TabBarViewController()
                 let navigationController = UINavigationController(rootViewController: viewController)
                 navigationController.modalPresentationStyle = .fullScreen
                 self.present(navigationController, animated: true, completion: nil)
