@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>982724995543-81p6nepvt22jris3j4t96cuc808ollg2.apps.googleusercontent.com</string>
+	<string>970650390015-2g5c37011hq0k8gb0g1uao6pggssr827.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.982724995543-81p6nepvt22jris3j4t96cuc808ollg2</string>
+	<string>com.googleusercontent.apps.970650390015-2g5c37011hq0k8gb0g1uao6pggssr827</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCUCvOyuedfZZvjqN_I5yNbtWnN05BJtsk</string>
+	<string>AIzaSyBDNzmaHZYiPrTfV7Y6yQ40IsX_t-iwWYA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>982724995543</string>
+	<string>970650390015</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.chidiogo.myfirstapp.E-Commerce-App</string>
+	<string>io.blinqpay.blinqpost</string>
 	<key>PROJECT_ID</key>
-	<string>e-commerce-app-42eaf</string>
+	<string>blinqpost</string>
 	<key>STORAGE_BUCKET</key>
-	<string>e-commerce-app-42eaf.appspot.com</string>
+	<string>blinqpost.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:982724995543:ios:c057d160c6698b3cc0c392</string>
+	<string>1:970650390015:ios:1a47a9e87b90e7743eabca</string>
 </dict>
 </plist>

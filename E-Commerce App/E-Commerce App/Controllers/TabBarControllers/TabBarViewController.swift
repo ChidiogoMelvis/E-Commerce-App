@@ -18,7 +18,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
-        view.backgroundColor = UIColor(named: "lightGray")
+        view.backgroundColor = #colorLiteral(red: 0.01266666781, green: 0.01266666595, blue: 0.01266666781, alpha: 0.02795306355)
     }
     func setupViewControllers() {
         let vcIcons = [

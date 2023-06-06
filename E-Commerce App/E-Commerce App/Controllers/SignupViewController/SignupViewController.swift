@@ -11,6 +11,9 @@ import FirebaseAuth
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Properties of the pagesviewcontrollers
+    
+    let viewModel = SignupViewModel()
+    
     lazy var signupWelcomeLabel: UILabel = {
         let label = UILabel()
         label.contentMode = .scaleAspectFill
@@ -175,45 +178,29 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
-  //MARK: - This function checks the validity of the textfield, and calls the create user function at the end.
-    @objc func handleSignup() {
-        guard let email = emailAddressTxtField.text else { return }
-        guard let password = signupPasswordTxtField.text else { return }
-        guard let reEnterPassword = reenterSignupPasswordTxtField.text else { return }
-        guard let firstName = firstNameTxtField.text else { return }
-        guard let lastName = lastNameTxtField.text else { return }
-        
-        createUser(withEmail: email, password: password, reEnterPassword: reEnterPassword, firstName: firstName, lastName: lastName)
-    }
-// MARK: - This function creates user programmatically
-    func createUser(withEmail email: String, password: String, reEnterPassword: String, firstName: String, lastName: String) {
-        let details = ["email": email, "firstName": firstName, "lastName": lastName]
-        Auth.auth().createUser(withEmail: emailAddressTxtField.text!, password: signupPasswordTxtField.text!) { result, error in
-            if error != nil {
-                let alertController = UIAlertController(title: "Error", message: "Please fill your details", preferredStyle: .alert)
-                
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
-                return
-            }
-            
-            guard let uid = result?.user.uid else { return }
-            
-            Database.database().reference().child("users").child(uid).updateChildValues(details, withCompletionBlock: { (error, ref ) in
-                if let error = error {
-                    print("failed to update database values with error: ", error.localizedDescription  )
-                    return
+ 
+        @objc func handleSignup() {
+                viewModel.email = emailAddressTxtField.text ?? ""
+                viewModel.password = signupPasswordTxtField.text ?? ""
+                viewModel.reEnterPassword = reenterSignupPasswordTxtField.text ?? ""
+                viewModel.firstName = firstNameTxtField.text ?? ""
+                viewModel.lastName = lastNameTxtField.text ?? ""
+
+                viewModel.createUser { success, error in
+                    if success {
+                        let viewController = TabBarViewController()
+                        let navigationController = UINavigationController(rootViewController: viewController)
+                        navigationController.modalPresentationStyle = .fullScreen
+                        self.present(navigationController, animated: true, completion: nil)
+                    } else if let error = error {
+                        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    }
                 }
-                print("successfully signed user up")
-                let viewController = TabBarViewController()
-                let navigationController = UINavigationController(rootViewController: viewController)
-                navigationController.modalPresentationStyle = .fullScreen
-                self.present(navigationController, animated: true, completion: nil)
-            })
-        }
-    }
-    
+            }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "darkgreen")

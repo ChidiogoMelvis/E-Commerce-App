@@ -28,8 +28,9 @@ extension OnboardingPageViewController {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if let viewControllers = pageViewController.viewControllers {
             if let viewControllerIndex = self.pages.firstIndex(of: viewControllers[0]) {
-                self.pageControl.currentPage = viewControllerIndex
+                //self.pageControl.currentPage = viewControllerIndex
             }
         }
     }
+    
 }

@@ -12,7 +12,7 @@ import FirebaseAuth
 extension ProfileViewController {
     // MARK: - Logout implementation using firebase
     @objc func logoutBtnTapped() {
-        let alertController = UIAlertController(title: "Logout Confirmation? \n", message: "Are you sure you want to logout from your account?.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Logout Confirmation? \n", message: "Are you sure you want to logout from your account?.", preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
             let auth = Auth.auth()
             do{

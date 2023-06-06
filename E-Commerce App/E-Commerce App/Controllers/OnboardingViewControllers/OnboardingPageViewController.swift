@@ -10,7 +10,6 @@ import UIKit
 class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIViewControllerTransitioningDelegate {
     
     var pages: [UIViewController] = []
-    var pageControl = UIPageControl()
     var initialPage = 0
     var pendingIndex: Int?
     
@@ -18,7 +17,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         super.viewDidLoad()
         setupViewControllers()
         view.backgroundColor = UIColor(named: "white")
-        setupPageControl()
+        //setupPageControl()
     }
     // MARK: - Overriding the default curl transition to scroll
     override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
@@ -45,13 +44,13 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         self.pages.append(pageTwo)
         self.pages.append(pageThree)
         
-        pageControl.currentPage = 0
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.currentPageIndicatorTintColor = UIColor(named: "darkgreen")
-        pageControl.numberOfPages = pages.count
-        pageControl.pageIndicatorTintColor = UIColor(named: "lightgreen")
-        pageControl.frame = CGRect(x: 0, y: 400, width: view.frame.size.width, height: view.frame.size.height)
-        pageControl.currentPage = initialPage
+//        pageControl.currentPage = 0
+//        pageControl.translatesAutoresizingMaskIntoConstraints = false
+//        pageControl.currentPageIndicatorTintColor = UIColor(named: "darkgreen")
+//        pageControl.numberOfPages = pages.count
+//        pageControl.pageIndicatorTintColor = UIColor(named: "lightgreen")
+//        pageControl.frame = CGRect(x: 0, y: 400, width: view.frame.size.width, height: view.frame.size.height)
+//        pageControl.currentPage = initialPage
         
         setViewControllers([pages[initialPage]], direction: .forward,
                            animated: false,
@@ -73,16 +72,16 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         present(nextScreen, animated: true, completion: nil)
     }
     //MARK: - Setupviews and constraint of the page controller
-    func setupPageControl() {
-        view.addSubview(pageControl)
-        
-        NSLayoutConstraint.activate([
-            pageControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -120),
-            pageControl.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20),
-            pageControl.heightAnchor.constraint(equalToConstant: 20),
-            pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        ])
-    }
+//    func setupPageControl() {
+//        view.addSubview(pageControl)
+//
+//        NSLayoutConstraint.activate([
+//            pageControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -120),
+//            pageControl.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20),
+//            pageControl.heightAnchor.constraint(equalToConstant: 20),
+//            pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//        ])
+//    }
 }
 
 

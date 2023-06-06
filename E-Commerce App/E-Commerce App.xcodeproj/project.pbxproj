@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042DA7852A1DA09E0090B4DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042DA7842A1DA09E0090B4DF /* GoogleService-Info.plist */; };
+		04737F652A2FCBD7005EAB0C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04737F642A2FCBD7005EAB0C /* SignupViewModel.swift */; };
+		04737F682A2FCD36005EAB0C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04737F672A2FCD36005EAB0C /* LoginViewModel.swift */; };
 		B463631D28889D3A00733609 /* BeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463631C28889D3A00733609 /* BeveragesViewController.swift */; };
 		B463632128909D8400733609 /* BreadBakeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632028909D8400733609 /* BreadBakeryViewController.swift */; };
 		B463632328909DCE00733609 /* VegetablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463632228909DCE00733609 /* VegetablesViewController.swift */; };
@@ -30,7 +33,6 @@
 		B46363552893185C00733609 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B46363542893185C00733609 /* FirebaseMessaging */; };
 		B46363572893185C00733609 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B46363562893185C00733609 /* FirebaseStorage */; };
 		B46363592893185C00733609 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B46363582893185C00733609 /* FirebaseStorageCombine-Community */; };
-		B46363632893242200733609 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B46363622893242200733609 /* GoogleService-Info.plist */; };
 		B4699C3C28770C8800F2BF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4699C3B28770C8800F2BF99 /* AppDelegate.swift */; };
 		B4699C3E28770C8800F2BF99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */; };
 		B4699C4528770C8B00F2BF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4699C4428770C8B00F2BF99 /* Assets.xcassets */; };
@@ -90,6 +92,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042DA7842A1DA09E0090B4DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04737F642A2FCBD7005EAB0C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		04737F672A2FCD36005EAB0C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B463631C28889D3A00733609 /* BeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesViewController.swift; sourceTree = "<group>"; };
 		B463632028909D8400733609 /* BreadBakeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadBakeryViewController.swift; sourceTree = "<group>"; };
 		B463632228909DCE00733609 /* VegetablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetablesViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +106,6 @@
 		B463632E2890D74800733609 /* GroceriesCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesCellProtocol.swift; sourceTree = "<group>"; };
 		B46363312892190C00733609 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B463633428928F5200733609 /* IconsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsImageView.swift; sourceTree = "<group>"; };
-		B46363622893242200733609 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4699C3828770C8800F2BF99 /* E-Commerce App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Commerce App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4699C3B28770C8800F2BF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4699C3D28770C8800F2BF99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04737F662A2FCBF9005EAB0C /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				04737F642A2FCBD7005EAB0C /* SignupViewModel.swift */,
+				04737F672A2FCD36005EAB0C /* LoginViewModel.swift */,
+			);
+			path = AuthManager;
+			sourceTree = "<group>";
+		};
 		B46363302892183900733609 /* ReusableTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,17 +370,18 @@
 		B4699C3A28770C8800F2BF99 /* E-Commerce App */ = {
 			isa = PBXGroup;
 			children = (
+				B4F989CE2878E6C700D3D1CA /* Storyboard */,
 				B4F989CF2878E6E200D3D1CA /* Delegates */,
+				04737F662A2FCBF9005EAB0C /* AuthManager */,
 				B4F989F9287FAE9400D3D1CA /* Model */,
 				B4699C4928770C8B00F2BF99 /* Info.plist */,
-				B46363622893242200733609 /* GoogleService-Info.plist */,
+				042DA7842A1DA09E0090B4DF /* GoogleService-Info.plist */,
 				B4F989D22878ED3B00D3D1CA /* Extensions */,
 				B46363702895FFB300733609 /* ReusableViews */,
 				B4F989CC2878E68A00D3D1CA /* Custom */,
 				B4699C5128771A4900F2BF99 /* Fonts */,
 				B4F989CB2878E66700D3D1CA /* Controllers */,
 				B4F989CD2878E6AB00D3D1CA /* Resources */,
-				B4F989CE2878E6C700D3D1CA /* Storyboard */,
 			);
 			path = "E-Commerce App";
 			sourceTree = "<group>";
@@ -642,7 +656,7 @@
 			files = (
 				B4699C7C28771B8A00F2BF99 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				B4699C7828771B8A00F2BF99 /* Montserrat-ExtraBold.ttf in Resources */,
-				B46363632893242200733609 /* GoogleService-Info.plist in Resources */,
+				042DA7852A1DA09E0090B4DF /* GoogleService-Info.plist in Resources */,
 				B4699C6B28771B8A00F2BF99 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				B4699C7528771B8A00F2BF99 /* Montserrat-BlackItalic.ttf in Resources */,
 				B4699C7428771B8A00F2BF99 /* Montserrat-MediumItalic.ttf in Resources */,
@@ -683,6 +697,7 @@
 				B4F989EB287F044500D3D1CA /* NewProductsCell.swift in Sources */,
 				B4F989DA287C312700D3D1CA /* SignupViewController.swift in Sources */,
 				B463632528909DE800733609 /* FruitViewController.swift in Sources */,
+				04737F682A2FCD36005EAB0C /* LoginViewModel.swift in Sources */,
 				B4F989C2287884F200D3D1CA /* OnboardingViewControllerOne.swift in Sources */,
 				B4F989BE2878777000D3D1CA /* ViewController.swift in Sources */,
 				B4F989E2287EEF3400D3D1CA /* StoreViewController.swift in Sources */,
@@ -716,6 +731,7 @@
 				B463632928909E1100733609 /* FrozenVegViewController.swift in Sources */,
 				B4BC422C289864B900D4A2D6 /* Extension+ProfileViewController.swift in Sources */,
 				B4F989EE287F61C800D3D1CA /* Extension+Constraints.swift in Sources */,
+				04737F652A2FCBD7005EAB0C /* SignupViewModel.swift in Sources */,
 				B4F989C42878851200D3D1CA /* OnboardingViewControllerTwo.swift in Sources */,
 				B463632F2890D74800733609 /* GroceriesCellProtocol.swift in Sources */,
 			);
