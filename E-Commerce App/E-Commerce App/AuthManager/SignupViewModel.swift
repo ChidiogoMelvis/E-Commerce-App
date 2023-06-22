@@ -31,7 +31,6 @@ class SignupViewModel {
                     completion(false, error)
                     return
                 }
-
                 completion(true, nil)
             }
         }
