@@ -1,1 +1,1 @@
-# E-Commerce-App
+I replicated a Tradly App using Firebase Auth for user registration, login and logout functionalities. The ui was created using Programmatic Ui, MVVM Design Patterns, Protocol Delegates for exchanging of data between Viewcontrollers.
